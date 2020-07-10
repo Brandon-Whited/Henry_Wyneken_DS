@@ -1,0 +1,270 @@
+/*------------------------------------*/
+/* Basic Setup */
+/*------------------------------------*/
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    
+}
+
+html {
+    color: #000000; 
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; 
+    font-weight: 300; 
+    text-rendering: optimizeLegibility; 
+}
+
+
+/*
+Colors used:
+Blue = #0984e3
+*/
+
+
+/*------------------------------------*/
+/* Reusable components */
+/*------------------------------------*/
+
+
+.row {
+    max-width: 1140px; 
+    margin: 0 auto; /* Set top and right and it repeats for bottom and left. This centers the page on the screen*/ 
+}
+
+
+section {
+    padding: 80px 0; 
+}
+
+.box { 
+    padding: 1%; 
+}
+
+/*------ Headings ----------*/
+
+h1, h2, h3 {
+    font-weight: 300; 
+    text-transform: uppercase; 
+    letter-spacing: -1px;
+    word-spacing: 1px;     
+    color: #000000; 
+}
+
+h1 {
+    margin: 0 0 5px 0; 
+    font-size: 250%; 
+    letter-spacing: -1px;
+    word-spacing: 1px; 
+}
+
+h2 {
+    font-size: 180%; 
+    margin: 0 0 5px 0; 
+    text-align: center; 
+    letter-spacing: 0px;
+    word-spacing: 2px; 
+    margin-bottom: 30px;
+}
+
+h2:after {
+    display: block; 
+    background-color: #0984e3; 
+    height: 2px;
+    content: " "; 
+    width: 100px; 
+    margin: 20px auto; 
+    /* This defines an objext that'll always appear after 
+    h2. In this case a blue box*/
+    
+}
+
+h3 {
+    font-size: 115%; 
+    margin: 0 0 10px 0; 
+
+}
+
+
+/*------ paragraphs ----------*/
+
+.long_copy {
+    line-height: 145%; 
+    width: 36%; 
+    margin-left: 32%; 
+    
+    /*Trick for centering.
+    box width 36%. Thus margin = (1 - 0.36)/2
+    */
+}
+
+.box p {
+    font-size: 90%; 
+    line-height: 145%; 
+}
+
+
+/*------ icon ----------*/
+
+.iconBig {
+    font-size: 300%;
+    display: block; /*give us a line break*/
+    color: #0984e3; 
+    
+}
+
+
+/*------------------------------------*/
+/* Buttons  */
+/*------------------------------------*/
+.btn:link, 
+.btn:visited {
+    display: inline-block; 
+    padding: 10px 30px; 
+    margin: 0 10px 0 0; 
+    font-weight: 400; 
+    text-decoration: none; 
+    border-radius: 200px; 
+    transition: color 0.3s, background-color 0.3s, border 0.3s, 
+        padding 0.3s; 
+}
+
+.btn_full:link,
+.btn_full:visited {
+    border: 1px solid #0984e3; 
+    background-color: #0984e3; 
+    color: #ffffff;
+    
+}
+
+.btn_ghost:link,
+.btn_ghost:visited {
+    border: 1px solid #0984e3; 
+    color: #0984e3;
+}
+
+.btn:hover, 
+.btn:active {
+    border: 1px solid #0984e3; 
+    background-color: #0984e3; 
+    padding: 10px 60px; 
+}
+
+.btn_ghost:hover, 
+.btn_ghost:active {
+    border: 1px solid #0984e3; 
+    background-color: #ffffff; 
+    color: #0984e3; 
+    padding: 10px 60px;
+    
+}
+
+
+
+/*------------------------------------*/
+/* Header */
+/*------------------------------------*/
+
+header {
+    background-image: linear-gradient(rgb(255, 255, 255, 0.7), rgba(255, 255, 255)), url(img/headerimage3.jpg); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    border-bottom: 1px solid #ededed; 
+}
+
+
+.header_text_box {
+    position: absolute; 
+    width: 1140px;
+    top: 45%;
+    left: 10%; 
+    /*transform: translate(-50%, -90%); */
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;  
+    margin-top: 20px; 
+}
+
+.main_nav {
+    float: right;
+}
+
+.main_nav li {
+    display: inline-block;
+    margin: 40px 0 0 30px; 
+    
+}
+
+.main_nav li a:link, 
+.main_nav li a:visited {
+    padding: 3px 0; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: 90%; 
+    color: #000000; 
+    border-bottom: 2px solid #000000; 
+    transition: border-bottom 1s, background-color 1s, color 1s; 
+}
+
+
+.main_nav li a:hover, 
+.main_nav li a:active {
+    border-bottom: 50px solid #000000; 
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+
+/*------------------------------------*/
+/* section1 */
+/*------------------------------------*/
+
+
+/*------------------------------------*/
+/* section2 */
+/*------------------------------------*/
+
+.section2 {
+    padding: 0; 
+}
+
+.showCase1 {
+    list-style: none; 
+    width: 100%; 
+}
+
+.showCase1 li {
+    display: block; 
+    float: left; 
+    width: 25%; 
+}
+
+.showCase_photo {
+    width: 100%; 
+    margin: 0; 
+    overflow: hidden; 
+    background-color: #0984e3; 
+}
+
+.showCase_photo img {
+    opacity: 0.8; 
+    object-fit: cover;
+    width: 100%; 
+    height: 500px; 
+    transform: scale(1.5); 
+    transition: transform 1s, opacity 1s; 
+}
+
+.showCase_photo img:hover {
+    opacity: 1; 
+    transform: scale(1.03); 
+}
+
+

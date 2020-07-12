@@ -333,7 +333,6 @@ header {
 }
 
 /*Similar to last-child. Acting on the last thing in the class*/
-
 .btn_app img {
     height: 50px; 
 }
@@ -344,9 +343,14 @@ header {
 /*------------------------------------*/
 /* section4 */
 /*------------------------------------*/
-
-
-
+.box img {
+    width: 400px; 
+    height: 250px; 
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.42); 
+    margin-bottom: 40px; 
+    object-fit:cover;  
+    /*border: 1px solid #000000; */
+}
 
 
 
